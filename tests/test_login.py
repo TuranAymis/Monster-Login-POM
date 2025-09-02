@@ -14,8 +14,8 @@ class SuccessfulLoginTest(unittest.TestCase):
         self.login_page.open_page("https://www.monsternotebook.com.tr/giris")
 
         # Geçerli kullanıcı bilgileri
-        email = "turan.aymis@monsternotebook.com"  # **Buraya geçerli bir e-posta adresi girin**
-        password = "test123"  # **Buraya geçerli bir şifre girin**
+        email = "test@kullanici.com"  # **Buraya geçerli bir e-posta adresi girin**
+        password = "sifre"  # **Buraya geçerli bir şifre girin**
 
         self.login_page.enter_credentials(email, password)
         self.login_page.click_giris_yap_button_form()
