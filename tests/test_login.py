@@ -11,8 +11,7 @@ class SuccessfulLoginTest(unittest.TestCase):
 
     def test_successful_login(self):
         # Başarılı login testi
-        self.login_page.open_page("https://www.monsternotebook.com.tr/")
-        self.login_page.click_giris_yap_button_top()
+        self.login_page.open_page("https://www.monsternotebook.com.tr/giris")
 
         # Geçerli kullanıcı bilgileri
         email = "turan.aymis@monsternotebook.com"  # **Buraya geçerli bir e-posta adresi girin**

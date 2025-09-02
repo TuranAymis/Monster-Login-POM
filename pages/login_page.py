@@ -8,18 +8,13 @@ class LoginPage:
         self.wait = WebDriverWait(self.driver, 10)  # Elementlerin görünmesini beklemek için
 
         # Sayfa elementleri için locators
-        self.giris_yap_button_top = (By.XPATH, "//div[@class='header-right']//a[@title='Giriş Yap']")
-        self.email_input = (By.ID, "user-email")
-        self.password_input = (By.ID, "user-password")
-        self.giris_yap_button_form = (By.XPATH, "//button[@type='submit'][normalize-space()='Giriş Yap']")
-        self.successful_login_element = (By.XPATH, "//div[@class='header-top-menu']//a[contains(text(), 'Hesabım')]")
+        self.email_input = (By.XPATH, "//input[@id='UserNameOrEmail']")
+        self.password_input = (By.XPATH, "(//input[@id='Password'])[1]")
+        self.giris_yap_button_form = (By.XPATH, "(//button[@class='btn btn-primary fs-16 fw-500 w-100'])[1]")
+        self.successful_login_element = (By.XPATH, "//div[@class='main-text d-login login-username text-white']")
 
     def open_page(self, url):
         self.driver.get(url)
-
-    def click_giris_yap_button_top(self):
-        # Ana sayfadaki "Giriş Yap" butonuna tıkla
-        self.wait.until(EC.element_to_be_clickable(self.giris_yap_button_top)).click()
 
     def enter_credentials(self, email, password):
         # E-posta ve şifre alanlarına bilgileri gir
