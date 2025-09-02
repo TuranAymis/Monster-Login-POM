@@ -15,8 +15,8 @@ class SuccessfulLoginTest(unittest.TestCase):
         self.login_page.click_giris_yap_button_top()
 
         # Geçerli kullanıcı bilgileri
-        email = "gecerli@kullanici.com"  # **Buraya geçerli bir e-posta adresi girin**
-        password = "gecerli_sifre"  # **Buraya geçerli bir şifre girin**
+        email = "test@example.com"  # **Buraya geçerli bir e-posta adresi girin**
+        password = "your-password"  # **Buraya geçerli bir şifre girin**
 
         self.login_page.enter_credentials(email, password)
         self.login_page.click_giris_yap_button_form()
